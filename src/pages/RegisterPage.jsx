@@ -78,13 +78,13 @@ const RegisterPage = () => {
         (response) => {
           setRequestResponse({
             textMessage: response.data.message,
-            alertClass: "alert alert-danger",
+            alertClass: "alert alert-success",
           });
         },
         (error) => {
           setRequestResponse({
             textMessage: error.response.data.message,
-            alertClass: "alert alert-success",
+            alertClass: "alert alert-danger",
           });
         }
       )

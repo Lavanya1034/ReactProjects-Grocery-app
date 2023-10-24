@@ -24,7 +24,7 @@ function LoginPage() {
         (response) => {
           setRequestResponse({
             textMessage: 'Login is successful',
-            alertClass: "alert alert-danger",
+            alertClass: "alert alert-success",
           });
           localStorage.setItem('token',response.data.token);
           localStorage.setItem('user',JSON.stringify(response.data.user));
@@ -33,7 +33,7 @@ function LoginPage() {
         (error) => {
           setRequestResponse({
             textMessage: error.response.data.message,
-            alertClass: "alert alert-success",
+            alertClass: "alert alert-danger",
           });
         }
       )
